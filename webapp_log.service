@@ -1,0 +1,10 @@
+# /etc/systemd/system/webapp_log.service
+[Unit]
+Description=WebApplicatiounVK_log
+[Service]
+Type=simple
+
+ExecStart=/bin/python3 /opt/webapp/app.py
+
+[Install]
+WantedBy=multi-user.target

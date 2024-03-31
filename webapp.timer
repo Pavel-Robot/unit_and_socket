@@ -1,0 +1,11 @@
+# /etc/systemd/system/webapp.timer
+[Unit]
+Description=Run webapp_log.service every 5 minutes
+
+[Timer]
+OnCalendar=*:0/5
+Unit=webapp_log.service
+
+[Install]
+WantedBy=timers.target
+
